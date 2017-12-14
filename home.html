@@ -1,0 +1,304 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="style/style.css" rel="stylesheet" />
+  <style type="text/css">
+    .head
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+    }
+    .more
+    {
+        margin-top: 2em !important;
+        display: block;
+        margin: auto;
+        text-align: center;
+        border: solid 1px;
+        padding: 10px !important;
+        width: 20em;
+        color: white;
+        cursor:pointer;
+    }
+    .map
+    {
+    	height: 90%;
+	    width: 50%;
+	    margin: 1em;
+	    float: right;
+    }
+    .map iframe
+    {
+    	width: 100%;
+    	height: 100%;
+    }
+    .students
+    {
+        background-repeat: no-repeat !important;
+        background-size: cover !important; 
+    }
+    .dropdown-menu
+    {
+        left: -132px;
+    }
+    .dropdown-menu .dropdown-item a
+    {
+        color:black !important;
+    }
+    .Campaigns
+    {
+        height: 100%;
+    }
+    .Campaigns .content
+    {
+        width: 45%;
+        height: 60%;
+        position: relative;
+        margin: auto;
+        margin-top: 10em;
+    }
+    .camping
+    {
+        position: absolute;
+        left: 1em;
+        top: 1em;
+        border: 1px solid;
+        border-radius: 10em;
+        padding: 5em !important;
+        background: transparent url("images/qarvachar.jpg") repeat scroll 0% 0%;
+        background-size: cover;
+    }
+    .Campaigns .title
+    {
+        top: 40%;
+        left: 40%;
+        position: absolute;
+        border: 1px solid;
+        border-radius: 10em;
+        height: 212.9px !important;
+        padding: 75px 15px !important;
+        width:15% !important;
+    }
+  </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="head">
+            <a href="home.html">
+                <div class="logo col-lg-1  col-md-1 col-sm-1">
+                    <div></div>
+                </div>
+            </a>        
+            <div class="menu">
+                <ul>
+                    <a href="home.html"><li onclick="scrolling($('.head'))">Գլխաւոր</li></a>
+                    <li onclick="scrolling($('.About'))"><a>Մեր մասին</a></li>
+                    <li onclick="scrolling($('.Contact'))"><a>Հետադարձ կապ</a></li>
+                    <li><a href="login.html">Մուտք</a></li>
+                    <li class="dropdown">
+                        <div class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Այլ</div>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li class="dropdown-item" onclick="scrolling($('.Students-Info'))"><a>Աշակերտներ</a></li>
+                            <li class="dropdown-item" onclick="scrolling($('.News'))"><a>Նորութիւններ</a></li>
+                            <li class="dropdown-item" onclick="scrolling($('.Campaigns'))"><a>Արշաւներ</a></li>
+                            <li class="dropdown-item" onclick="scrolling($('.Meetings'))"><a>Այցելութիւններ</a></li>
+                            <li class="dropdown-item" onclick="scrolling($('.Lectures'))"><a>Դասախօսութիւն</a></li>
+                            <li class="dropdown-item" onclick="scrolling($('.Pictures'))"><a>Լուսանկարներ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="home col-lg-12 col-md-12 col-sm-12" style="position:relative !important;">
+                <div class="bigImage col-lg-12 col-md-12 col-sm-12"></div>
+                <div class="left" style="left:1em !important;"><</div>
+			    <div class="right" style="left: inherit !important;">></div>
+			    <div class="pages">
+			    	<div class="pages-div">
+			    	</div>
+			    </div>
+                <div style="bottom: 5em; left: 40%;" class="more">Տեսնել Աւելին</div>
+            </div>
+            <div class="About col-lg-12 col-md-12 col-sm-12"  style="position:relative !important;">
+                <div class="bigImage"></div>
+                <div class="popupwindow" style="position: absolute;top: 0;"></div>
+                <h1 class="title">Մեր մասին</h1>
+                <br><br>
+                <hr>
+                <div class="smText">
+                    <p>Կառուցում ենք մասնագիտական կրթության նոր ձևաչափ, կիրառելով ինչպես դասական կրթության (liberal arts), այնպես էլ պրոգրեսիվ կրթության (progressive education) մոտեցումները, մասնավորապես՝ նախագծային ուսուցումը (project based education, learning by doing), միահավաք ուսուցման ծրագիր (integrated curriculum), առ-ցանց կրթական հարթակներ (coursera, khanacademy), սովորեցնելով սովորել (learning by teaching):  Ուսման ձևաչափը նման է գիտահետազոտական կենտրոնների և նորարական ձեռնարկությունների կրտսեր մասնագետների աշխատանքային առաջին տարիներին: Ուսումնարանը կոչվում է «Իրական ՈՒսումնարան», Շուշիի Ռեալական ուսումնարանի հիշատակին, ինչպես նաև այն պատճառով, որ նախագծային կրթությունը հենված է բացառապես իրական կյանքից վերցված և իրական մարդկանց համար ստեղծվող նախագծերի վրա: Նախագծերից շատերը հովանավորովում են գործընկեր կազմակերպությունների կողմից և հենց այդ կազմակերպություններն էլ ուսման ավարտին պատիվ կ'ունենան առաջինը հրավիրել շրջանավարտներին աշխատանքի:</p>
+                </div>
+                
+                <div class="imagesPartniers">
+                    <div class="left"><</div>
+                <div class="right">></div>
+                    <div class="partniers-content">
+                        <h1 class="title">Մեր համագործակիցները</h1>
+                        <div class="partniers" style="color:white;"></div>
+                        <div class="partniers" style="color:white;"></div>
+                        <div class="partniers" style="color:white;"></div>
+                        <div class="partniers" style="color:white;"></div>
+                        <div class="partniers" style="color:white;"></div>
+                        <div class="partniers" style="color:white;"></div>
+                        <div class="partniers" style="color:white;"></div>
+                        <div class="partniers" style="color:white;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="Students-Info col-lg-12 col-md-12 col-sm-12 " style="position:relative !important;">
+                <h1 class="title">Աշակերտներ</h1>
+                <div class="search-bar">
+                    <input type="text" placeholder="Որոնում">
+                    <select>
+                        <option>-- Մարզեր --</option>
+                        <option>Գյումրի</option>
+                        <option>Կոտայք</option>
+                        <option>Երեւան</option>
+                    </select>
+                    <select>
+                        <option>-- Կուրս --</option>
+                        <option>I</option>
+                        <option>II</option>
+                        <option>III</option>
+                        <option>IV</option>
+                    </select>
+                </div>
+                <div class="left"><</div>
+                <div class="right">></div>
+                <div class="studentsDiv">
+                    <div class="studentDiv">
+                        <a href="student.html">
+                            <div id="student1" class="students" style="background: url(images/1.jpg);"></div>
+                            <p>Արթուր Գրիգորեան</p>
+                            <p>Կուրս 1</p>
+                        </a>
+                    </div>
+                    <div class="studentDiv">
+                        <a href="student.html">
+                            <div id="student2" class="students" style="background: url(images/2.jpg)"></div>
+                            <p>Էրիկ Մկրտչեան</p>
+                            <p>Կուրս 1</p>
+                        </a>
+                    </div>
+                    <div class="studentDiv">
+                        <a href="student.html">
+                            <div id="student3" class="students" style="background: url(images/9.jpg)"></div>
+                            <p>Սամուել Հարութիւնեան</p>
+                            <p>Կուրս 2</p>
+                        </a>
+                    </div>
+                    <div class="studentDiv">
+                        <a href="student.html">
+                            <div id="student5" class="students" style="background: url(images/7.jpg)"></div>
+                            <p>Արամ Պողոսեան</p>
+                            <p>Կուրս 1</p>
+                        </a>
+                    </div>
+                    <div class="studentDiv">
+                        <a href="student.html">
+                            <div id="student5" class="students" style="background: url(images/21.jpg)"></div>
+                            <p>Ստեփան Մանջիկեան</p>
+                            <p>Կուրս 1</p>
+                        </a>
+                    </div>
+                    <div class="studentDiv">
+                        <a href="student.html">
+                            <div id="student6" class="students" style="background: url(images/5.jpg)"></div>
+                            <p>Ինգա Վաղարշեան</p>
+                            <p>Կուրս 1</p>
+                        </a>
+                    </div>
+                </div>
+                <a href="students.html"><div class="more">Նայել ավելին</div></a>
+            </div>
+            
+            <div class="Campaigns col-lg-12 col-md-12 col-sm-12"  style="position:relative !important;">
+                <h1 class="title">Արշաւներ</h1>
+                <div class="content">
+                    <div class="camping"></div>
+                </div>
+            </div>
+            <div class="Lectures col-lg-12 col-md-12 col-sm-12"  style="position:relative !important;">
+                <div class="bigImage" style="background: url(images/lectures_wallpaper.jpg);width: 100%;"></div>
+                <div class="popupwindow"></div>
+                <div class="lecList">
+                    <a href="lectures.html"><div class="lecsLecList">
+                        <div class="image"></div>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ante quis nibh hendrerit tempus. Integer fringilla vulputate nibh. Nullam pharetra hendrerit commodo. Phasellus scelerisque nunc a turpis fermentum, eget interdum eros semper. Quisque placerat, nulla non euismod dapibus, sem odio maximus elit, quis ornare mauris nisi imperdiet mauris. 
+                        </div>
+                    </div></a>
+                    <a href="lectures.html"><div class="lecsLecList">
+                        <div class="image"></div>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ante quis nibh hendrerit tempus. Integer fringilla vulputate nibh. Nullam pharetra hendrerit commodo. Phasellus scelerisque nunc a turpis fermentum, eget interdum eros semper. Quisque placerat, nulla non euismod dapibus, sem odio maximus elit, quis ornare mauris nisi imperdiet mauris. </div>
+                    </div></a>
+                    <a href="lectures.html"><div class="lecsLecList">
+                        <div class="image"></div>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ante quis nibh hendrerit tempus. Integer fringilla vulputate nibh. Nullam pharetra hendrerit commodo. Phasellus scelerisque nunc a turpis fermentum, eget interdum eros semper. Quisque placerat, nulla non euismod dapibus, sem odio maximus elit, quis ornare mauris nisi imperdiet mauris. </div>
+                    </div></a>
+                    <a href="lectures.html"><div class="lecsLecList">
+                        <div class="image"></div>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et ante quis nibh hendrerit tempus. Integer fringilla vulputate nibh. Nullam pharetra hendrerit commodo. Phasellus scelerisque nunc a turpis fermentum, eget interdum eros semper. Quisque placerat, nulla non euismod dapibus, sem odio maximus elit, quis ornare mauris nisi imperdiet mauris. </div>
+                    </div></a>
+                </div>
+                <h1>Մեր դասախօսութիւնները</h1>
+            </div>            
+        </div>
+        <div class="Contact col-lg-12 col-md-12 col-sm-12" style="position:relative !important;">
+                <h1 class="title" style="color:#333;">Հետադարձ կապ</h1>
+                <form action="/" method="post" style="float: left;width: 13%;margin-left: 7em;">
+                    <input type="text" name="name" placeholder="Անուն"/><br>
+                    <input type="text" name="contactInfo" placeholder="Էլ․ հասցե"/><br>
+                    <input type="text" name="message" style="width: 200%; height: 25%; margin-left: -6em;" placeholder="Նամակ"/><br>
+                    <input type="submit"  value="Ուղարկել" />
+                </form>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1826.711480136133!2d44.550258484916256!3d40.21580383095239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abd2b8c170641%3A0x298cd571849b8cc4!2z0JjQvdGB0YLQuNCz0LXQudGC!5e1!3m2!1sru!2s!4v1512530724355" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+    </div> 
+    <script>
+        function scrolling(elem) {
+            console.log("clicked");
+            $("body").scrollTop(elem.position().top, 0);
+        }
+        var namesOfStudents = [
+{name: "Արթուր Գրիգորյան", course: 1, src: "1.jpg"},
+{name: "Էրիկ Մկրտչեան", course: 1, src: "2.jpg"},
+{name: "Սամուել Հարութիւնեան", course: 2, src: "9.jpg"},
+{name: "Արամ Պողոսեան", course: 1, src: "7.jpg"},
+{name: "Ստեփան Մանջիկեան", course: 1, src: "21.jpg"},
+{name: "Ինգա Վարղարշեան", course: 1, src: "5.jpg"}];
+for (var a = 0, b = 0; a < $(".studentDiv a p").length- 1; a+=2, b++) {
+    $(".studentDiv a p")[a].innerText = namesOfStudents[b].name;
+    $(".studentDiv a p")[a+1].innerText = "Կուրս "+namesOfStudents[b].course;
+    $(".studentDiv a")[b].href+="?name="+namesOfStudents[b].name+"&img=images/"+namesOfStudents[b].src;
+}
+         </script>
+         <script src="scripts/slider.js"></script>
+    <script>
+    	slide(["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"]);
+        
+    </script>
+    <script src="scripts/animations.js"></script>
+    <!--<script>
+        for(var a = 1, b = 0, mod = -1, pi = 3.14;a < 5; a++,b++)
+        {
+            if(b==1)
+            {
+                b=0;
+                mod*=-1;
+            }
+            $(".Campaigns .content").append("<div class='camping' style='left:"+(a* *mod*-1)+"em;top:"+(a*6*mod)+"em'></div>");
+        }
+    </script>-->
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Works</title>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="style/style.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="style/student.css">
+    <style type="text/css">
+        form
+        {
+            position: absolute;
+            top: 35%;
+            left: 44%;
+        }
+        form input
+        {
+            margin: 10px;
+        }
+        .title
+        {
+            z-index: 5;
+            position: absolute;
+            top: 6em;
+        }
+    </style>
+</head>
+<body>
+	<div class="container-fluid" style="height: 769px;">
+        <div class="head">
+            <a href="home.html">
+                <div class="logo col-lg-1  col-md-1 col-sm-1">
+                    <div></div>
+                </div>
+            </a>
+            <div class="menu">
+               <ul>
+                    <a href="home.html"><li onclick="scrolling($('.head'))">Գլխաւոր</li></a>
+                    <a href="About.html"><li>Մեր մասին</li></a>
+                    <a href="students.html"><li>Աշակերտներ</li></a>
+                    <a href="news.html"><li>Նորութիւններ</li></a>
+                    <a href="campings.html"><li>Արշաւներ</li></a>
+                    <a href="lectures.html"><li>Դասախօսութիւն</li></a>                   
+                    <a href="Contact.html"><li>Հետադարձ կապ</li></a>
+                    <li><a href="login.html">Մուտք</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content" style="height: 100%;position: relative;">
+            <div class="bigImage" style="background:url(images/project.jpg);"></div>
+            <h1 class="title">Մուտք</h1>
+            <div class="popupwindow" style="position: absolute; top: 0;"></div>
+            <form>
+                <input type="text" placeholder="Էլ․ հասցե">
+                <input type="password" placeholder="********">
+                <input type="submit" value="Ուղարկել">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

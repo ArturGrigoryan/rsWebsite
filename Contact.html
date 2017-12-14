@@ -1,0 +1,65 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqupery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="style/style.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="style/student.css">
+  <link rel="stylesheet" type="text/css" href="style/project.css">
+  <link rel="stylesheet" type="text/css" href="style/news.css">
+  <style type="text/css">
+    .info-campaing
+    {
+      margin: 1em;
+    }
+    .photos, .students
+    {
+      background: url(images/qarvachar.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+  </style>
+</head>
+<body>
+    <div class="container-fluid" style="height: 769px;">
+      <div class="head">
+          <a href="home.html">
+            <div class="logo col-lg-1  col-md-1 col-sm-1">
+              <div></div>
+            </div>
+          </a>
+          <div class="menu">
+           <ul>
+                    <a href="home.html"><li onclick="scrolling($('.head'))">Գլխաւոր</li></a>
+                    <a href="About.html"><li>Մեր մասին</li></a>
+                    <a href="students.html"><li>Աշակերտներ</li></a>
+                    <a href="news.html"><li>Նորութիւններ</li></a>
+                    <a href="campings.html"><li>Արշաւներ</li></a>
+                    <a href="lectures.html"><li>Դասախօսութիւն</li></a>                   
+                    <a href="Contact.html"><li>Հետադարձ կապ</li></a>
+                    <li><a href="login.html">Մուտք</a></li>
+                </ul>
+        </div>
+      </div>
+      <div class="content">
+        <div class="Contact col-lg-12 col-md-12 col-sm-12" style="position:relative !important;">
+                <h1 class="title" style="color:#333;">Հետադարձ կապ</h1>
+                <form action="/" method="post" style="float: left;width: 13%;margin-left: 7em;">
+                    <input type="text" name="name" placeholder="Անուն"/><br>
+                    <input type="text" name="contactInfo" placeholder="Էլ․ հասցե"/><br>
+                    <input type="text" name="message" style="width: 200%; height: 25%; margin-left: -6em;" placeholder="Նամակ"/><br>
+                    <input type="submit"  value="Ուղարկել" />
+                </form>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1826.711480136133!2d44.550258484916256!3d40.21580383095239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abd2b8c170641%3A0x298cd571849b8cc4!2z0JjQvdGB0YLQuNCz0LXQudGC!5e1!3m2!1sru!2s!4v1512530724355" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+    </div> 
+      </div>
+    </div>
+  </body>
+</html>

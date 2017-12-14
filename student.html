@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Works</title>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="style/style.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="style/student.css">
+    <style type="text/css">
+        .students
+        {
+            background-repeat: no-repeat !important;
+            background-size: cover !important; 
+        }
+        .projects
+        {
+            width:15em !important;
+        }
+    </style>
+</head>
+<body>
+	<div class="container-fluid">
+        <div class="head">
+            <a href="home.html">
+                <div class="logo col-lg-1  col-md-1 col-sm-1">
+                    <div></div>
+                </div>
+            </a>
+            <div class="menu">
+                <ul>
+                    <a href="home.html"><li onclick="scrolling($('.head'))">Գլխաւոր</li></a>
+                    <a href="About.html"><li>Մեր մասին</li></a>
+                    <a href="students.html"><li>Աշակերտներ</li></a>
+                    <a href="news.html"><li>Նորութիւններ</li></a>
+                    <a href="campings.html"><li>Արշաւներ</li></a>
+                    <a href="lectures.html"><li>Դասախօսութիւն</li></a>                   
+                    <a href="Contact.html"><li>Հետադարձ կապ</li></a>
+                    <li><a href="login.html">Մուտք</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+        	<div class="wallpaper">
+        		<div class="user col-lg-1 col-md-1 col-sm-1">
+        			<div class="image col-lg-1 col-md-1 col-sm-1"></div>
+        			<div class="username"></div>
+        		</div>
+        	</div>
+        	<div class="project">
+        		<h1 class="title">Նախագծեր</h1>
+        		<div class="left"><</div>
+        		<div class="right">></div>
+        		<div class="projects-div">
+        			<a href="project.html">
+					<div class="projects">
+	        				<div class="text">Կայքեր</div>
+        				</div>
+				</a>
+        			<a href="projects.html">
+					<div class="projects">
+	        				<div class="text">Կահույք</div>
+        				</div>
+				</a>
+        			<a href="projects.html">
+					<div class="projects">
+	        				<div class="text">Դասախոսություններ</div>
+        				</div>
+				</a>
+        			<a href="projects.html">
+					<div class="projects">
+	        				<div class="text">Համակարգիչներ</div>
+        				</div>
+				</a>
+        			<a href="projects.html">
+					<div class="projects">
+	        				<div class="text">Սարքեր</div>
+        				</div>
+                    </a>
+        		</div>
+        	</div>
+        	<div class="work">
+        		<h1 class="title">Աշխատանքներ</h1>
+        		<div class="left"><</div>
+        		<div class="right">></div>
+        		<div class="works-div">
+        			<a href="works.html">
+					<div class="works">
+	        				<div class="text">Անդրադարձներ</div>
+        				</div>
+				</a>
+				<a href="works.html">
+					<div class="works">
+	        				<div class="text">Մաթեմատիկայի Խնդիրներ</div>
+        				</div>
+				</a>
+				<a href="works.html">
+					<div class="works">
+	        				<div class="text">Կենսաբանութեան հարցեր</div>
+        				</div>
+				</a>
+				<a href="works.html">
+					<div class="works">
+	        				<div class="text">Աշխարհագրութեան հարցեր</div>
+        				</div>
+				</a>
+				<a href="works.html">
+					<div class="works">
+	        			<div class="text">Ֆիզիկայի խնդիրներ</div>
+        			</div>
+				</a>
+        		</div>
+        	</div>
+        	<div class="Students-Info col-lg-12 col-md-12 col-sm-12">
+                <h1 class="title">Այլ աշակերտներ</h1>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                    <select>
+                        <option>-- Մարզեր --</option>
+                        <option>Գյումրի</option>
+                        <option>Կոտայք</option>
+                        <option>Երեւան</option>
+                    </select>
+                    <select>
+                        <option>-- Կուրսեր --</option>
+                        <option>I</option>
+                        <option>II</option>
+                        <option>III</option>
+                        <option>IV</option>
+                    </select>
+                </div>
+                <div class="left"><</div>
+                <div class="right">></div>
+                <div class="studentsDiv">
+                    <div class="studentDiv">
+                        <a href="student.html">
+                            <div id="student1" class="students" style="background: url(images/1.jpg);"></div>
+                            <p>Արթուր Գրիգորեան</p>
+                            <p>Կուրս 1</p>
+                        </a>
+                    </div>
+                    <div class="studentDiv">
+                        <a href="student.html">
+                            <div id="student2" class="students" style="background: url(images/2.jpg)"></div>
+                            <p>Էրիկ Մկրտչեան</p>
+                            <p>Կուրս 1</p>
+                        </a>
+                    </div>
+                    <div class="studentDiv">
+                        <a href="student.html">
+                            <div id="student3" class="students" style="background: url(images/9.jpg)"></div>
+                            <p>Սամուել Հարութիւնեան</p>
+                            <p>Կուրս 2</p>
+                        </a>
+                    </div>
+                    <div class="studentDiv">
+                        <a href="student.html">
+                            <div id="student5" class="students" style="background: url(images/7.jpg)"></div>
+                            <p>Արամ Պողոսեան</p>
+                            <p>Կուրս 1</p>
+                        </a>
+                    </div>
+                    <div class="studentDiv">
+                        <a href="student.html">
+                            <div id="student5" class="students" style="background: url(images/21.jpg)"></div>
+                            <p>Ստեփան Մանջիկեան</p>
+                            <p>Կուրս 1</p>
+                        </a>
+                    </div>
+                    <div class="studentDiv">
+                        <a href="student.html">
+                            <div id="student6" class="students" style="background: url(images/5.jpg)"></div>
+                            <p>Ինգա Վաղարշեան</p>
+                            <p>Կուրս 1</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var url_string = window.location.href;
+        var url = new URL(url_string);
+        var c = url.searchParams.get("name");
+        nm = c;
+        $(".username").text(c);
+        c = url.searchParams.get("img");
+        $(".wallpaper .image").css({"background": "url("+c+")", "background-repeat":"no-repeat", "background-size":"cover"});
+        for(var a = 0; a < $(".projects-div a").length; a++)
+        $(".projects-div a")[a].href+="?name="+nm+"&img="+c;
+    </script>
+</body>
+</html>

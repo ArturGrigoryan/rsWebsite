@@ -1,0 +1,38 @@
+.content
+{
+    height: 51em;
+    width: 100%;
+    position: relative;
+}
+.list
+{
+	position: absolute;
+    top: 1em;
+    left: 2em;
+    border: solid 1px black;
+    width: 30%;
+    height: 95%;
+    border-radius: 10px;
+    background: white;
+}
+.popupwindow
+{
+	position: absolute;
+    top: 0;
+}
+.content .content
+{
+	width: 45%;
+    height: 98%;
+    float: right;
+    margin: 1em;
+    padding: 10px !important;
+    border: solid 1px;
+    border-radius: 10px;
+    text-align: center;
+    overflow-y: scroll;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background: white;
+}
