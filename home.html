@@ -289,16 +289,26 @@ for (var a = 0, b = 0; a < $(".studentDiv a p").length- 1; a+=2, b++) {
         
     </script>
     <script src="scripts/animations.js"></script>
-    <!--<script>
+    <script>
         for(var a = 1, b = 0, mod = -1, pi = 3.14;a < 5; a++,b++)
         {
-            if(b==1)
+        	posTop = a*6*mod;
+            if(posTop <= 200)
             {
-                b=0;
-                mod*=-1;
+            	console.log($(".Campaigns .content .camping")[0].offsetTop);
+            	$(".Campaigns .content").append("<div class='camping' style='left:"+(a*12*mod*-1)+"em;top:"+posTop+"em'></div>");	
             }
-            $(".Campaigns .content").append("<div class='camping' style='left:"+(a* *mod*-1)+"em;top:"+(a*6*mod)+"em'></div>");
+            else
+            {
+            	console.log("not ok");
+            	while(posTop >= 200)
+            	{
+            		posTop--;
+            	}
+            	$(".Campaigns .content").append("<div class='camping' style='left:"+(a*12*mod*-1)+"em;top:"+posTop+"em'></div>");
+            }
+            
         }
-    </script>-->
+    </script>
 </body>
 </html>
