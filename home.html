@@ -142,7 +142,7 @@
                     <div class="left"><</div>
                 <div class="right">></div>
                     <div class="partniers-content">
-                        <h1 class="title">Մեր համագործակիցները</h1>
+                        <h1 class="title">Մեր Գործընկերնեը</h1>
                         <div class="partniers" style="color:white;"></div>
                         <div class="partniers" style="color:white;"></div>
                         <div class="partniers" style="color:white;"></div>
@@ -290,24 +290,45 @@ for (var a = 0, b = 0; a < $(".studentDiv a p").length- 1; a+=2, b++) {
     </script>
     <script src="scripts/animations.js"></script>
     <script>
-        for(var a = 1, b = 0, mod = -1, pi = 3.14;a < 5; a++,b++)
+        for(var a = 1;a < 10; a++)
         {
-        	posTop = a*6*mod;
-            if(posTop <= 200)
+            posTop = normalize(a*7*16*-1, 50);
+            posLeft = normalize(a*9*16, 500);
+            console.log(posTop+" : "+posLeft);
+            console.log(posTop[0]);
+            if(a*10*16 > 500)
             {
-            	console.log($(".Campaigns .content .camping")[0].offsetTop);
-            	$(".Campaigns .content").append("<div class='camping' style='left:"+(a*12*mod*-1)+"em;top:"+posTop+"em'></div>");	
+                posTop[0] += posLeft[1]+(3.25*16);
             }
-            else
+            if(posTop[0] > 500)
             {
-            	console.log("not ok");
-            	while(posTop >= 200)
-            	{
-            		posTop--;
-            	}
-            	$(".Campaigns .content").append("<div class='camping' style='left:"+(a*12*mod*-1)+"em;top:"+posTop+"em'></div>");
+                posLeft[0] -= (posTop[1]-500)-(3.25*16);
+                console.log((a*7*16)+" : "+posTop[1]);
+                posTop[0]-=(posTop[1]-500)-(3.25*16);
             }
-            
+            posTop = posTop[0];
+            posLeft = posLeft[0];
+            $(".Campaigns .content").append("<div class='camping' style='left:"+posLeft+"px;top:"+(posTop)+"px'></div>");
+
+        }
+        function normalize(nb, max)
+        {
+            firstTime = nb;
+            if(nb < -1*max)
+            {
+                while(nb < -1*max)
+                {
+                    nb++;
+                }
+            }
+            if(nb > max)
+            {
+                while(nb > max)
+                {
+                    nb--;
+                }
+            }
+            return [nb, Math.abs(firstTime-nb)];
         }
     </script>
 </body>
