@@ -21,3 +21,10 @@ for(var a = 0, round = 250; a <= 10; a++, round-=50)
 }
 stage.addChild(shape3);
 stage.update();
+for(var a = 250; a > 0; a-=50)
+{
+   shape3.graphics.arc(Math.sqrt(250*250-a*a)+100+shape2.x, a+100-shape2.y, 10, 0, Math.PI*2);
+   console.log((Math.sqrt(250*250-a*a)+100+shape2.x)+" : "+(a));
+}
+stage.addChild(shape3);
+stage.update();
