@@ -7,6 +7,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link href="style/style.css" rel="stylesheet" />
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js" ></script>
   <style type="text/css">
     .head
     {
@@ -56,11 +57,14 @@
     .Campaigns
     {
         height: 100%;
+    	background: url(images/slider/5.jpg);
+    	background-size: cover;
+    	background-repeat: no-repeat;
     }
     .Campaigns .content
     {
         width: 45%;
-        height: 60%;
+        height: 78%;
         position: relative;
         margin: auto;
         margin-top: 10em;
@@ -73,7 +77,7 @@
         border: 1px solid;
         border-radius: 10em;
         padding: 5em !important;
-        background: transparent url("images/qarvachar.jpg") repeat scroll 0% 0%;
+        background: transparent url("images/slider/5.jpg") repeat scroll 0% 0%;
         background-size: cover;
     }
     .Campaigns .title
@@ -87,7 +91,12 @@
         padding: 75px 15px !important;
         width:15% !important;
     }
+      #campingCVN
+      {
+          background: white;
+      }
   </style>
+    <script src="scripts/canvas.js"></script>
 </head>
 <body>
     <div class="container-fluid">
@@ -142,7 +151,7 @@
                     <div class="left"><</div>
                 <div class="right">></div>
                     <div class="partniers-content">
-                        <h1 class="title">Մեր Գործընկերնեը</h1>
+                        <h1 class="title">Մեր գործընկերները</h1>
                         <div class="partniers" style="color:white;"></div>
                         <div class="partniers" style="color:white;"></div>
                         <div class="partniers" style="color:white;"></div>
@@ -222,10 +231,12 @@
             </div>
             
             <div class="Campaigns col-lg-12 col-md-12 col-sm-12"  style="position:relative !important;">
-                <h1 class="title">Արշաւներ</h1>
-                <div class="content">
+                <h1 class="title" style="z-index: 1;">Արշաւներ</h1>
+                <canvas id="campingCVN" width="1423" height="769"></canvas>
+                <div class="content" style="z-index: 1;">
                     <div class="camping"></div>
                 </div>
+                <!--<div class="popupwindow" style="position: absolute;top:0;"></div>-->
             </div>
             <div class="Lectures col-lg-12 col-md-12 col-sm-12"  style="position:relative !important;">
                 <div class="bigImage" style="background: url(images/lectures_wallpaper.jpg);width: 100%;"></div>
@@ -289,47 +300,6 @@ for (var a = 0, b = 0; a < $(".studentDiv a p").length- 1; a+=2, b++) {
         
     </script>
     <script src="scripts/animations.js"></script>
-    <script>
-        for(var a = 1;a < 10; a++)
-        {
-            posTop = normalize(a*7*16*-1, 50);
-            posLeft = normalize(a*9*16, 500);
-            console.log(posTop+" : "+posLeft);
-            console.log(posTop[0]);
-            if(a*10*16 > 500)
-            {
-                posTop[0] += posLeft[1]+(3.25*16);
-            }
-            if(posTop[0] > 500)
-            {
-                posLeft[0] -= (posTop[1]-500)-(3.25*16);
-                console.log((a*7*16)+" : "+posTop[1]);
-                posTop[0]-=(posTop[1]-500)-(3.25*16);
-            }
-            posTop = posTop[0];
-            posLeft = posLeft[0];
-            $(".Campaigns .content").append("<div class='camping' style='left:"+posLeft+"px;top:"+(posTop)+"px'></div>");
-
-        }
-        function normalize(nb, max)
-        {
-            firstTime = nb;
-            if(nb < -1*max)
-            {
-                while(nb < -1*max)
-                {
-                    nb++;
-                }
-            }
-            if(nb > max)
-            {
-                while(nb > max)
-                {
-                    nb--;
-                }
-            }
-            return [nb, Math.abs(firstTime-nb)];
-        }
-    </script>
+    <script src="scripts/canvas.js"></script>
 </body>
 </html>
