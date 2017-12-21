@@ -54,4 +54,33 @@ function slide(imgs)
 			$(".pages #div"+imgId).css("background", "radial-gradient(circle, #8a8a8a 20%, transparent 20%), linear-gradient(to right, white, white)");
 		}
 	});
+	$(document).keydown(function(e){
+		if(e.keyCode == 37 && imgId > 0)
+		{
+			imgId--;
+			$(".home .bigImage").css("background", "url(images/slider/"+imgs[imgId]+")");
+			$(".pages-div div").css("background", "white");
+			$(".pages #div"+imgId).css("background", "radial-gradient(circle, #8a8a8a 20%, transparent 20%), linear-gradient(to right, white, white)");
+		}
+		else if(imgId <= 0)
+		{
+			imgId = imgs.length-1;
+			$(".home .bigImage").css("background", "url(images/slider/"+imgs[imgId]+")");
+			$(".pages-div div").css("background", "white");
+			$(".pages #div"+imgId).css("background", "radial-gradient(circle, #8a8a8a 20%, transparent 20%), linear-gradient(to right, white, white)");
+		}
+		if(e.keyCode == 39 && imgId < imgs.length-1)
+		{
+			imgId++;
+			$(".home .bigImage").css("background", "url(images/slider/"+imgs[imgId]+")");
+			$(".pages-div div").css("background", "white");
+			$(".pages #div"+imgId).css("background", "radial-gradient(circle, #8a8a8a 20%, transparent 20%), linear-gradient(to right, white, white)");
+		}else if(imgId > imgs.length-1)
+		{
+			imgId = 0;
+			$(".home .bigImage").css("background", "url(images/slider/"+imgs[imgId]+")");
+			$(".pages-div div").css("background", "white");
+			$(".pages #div"+imgId).css("background", "radial-gradient(circle, #8a8a8a 20%, transparent 20%), linear-gradient(to right, white, white)");
+		}	
+	})
 }
