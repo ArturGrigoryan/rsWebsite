@@ -11,6 +11,7 @@ shape2.x=stage.canvas.width/2-100;
 shape2.y=stage.canvas.height/2-100;
 stage.addChild(shape2);
 var shape3 = new createjs.Shape();
+var allBitmaps = [];
 function createImg(x, y)
 {
         var container = new createjs.Container();
@@ -22,6 +23,7 @@ function createImg(x, y)
         var maskShape = new createjs.Shape();
         maskShape.graphics.drawCircle(50,50,50);
         bitmap.mask = maskShape;
+        allBitmaps.push(bitmap);
 
         container.addChild(bitmap);
 
