@@ -16,7 +16,7 @@ function createImg(x, y)
 {
         var container = new createjs.Container();
 
-        var bitmap = new createjs.Bitmap("images/slider/5.jpg");
+        var bitmap = new createjs.Bitmap("images/slider/6.jpg");
         bitmap.regX = bitmap.regY = 0;
         bitmap.y = bitmap.x = 0;
         bitmap.scaleX = bitmap.scaleY = 0.03;
@@ -33,7 +33,7 @@ function createImg(x, y)
             container.y = y;
 }
 $("#canvasCVN").ready(function () {
-    var bitmap = new createjs.Bitmap("images/slider/5.jpg");
+    var bitmap = new createjs.Bitmap("images/slider/6.jpg");
     stage.addChild(bitmap);
     for(var a = 250; a > 0; a-=100)
     {
@@ -47,10 +47,15 @@ $("#canvasCVN").ready(function () {
     {
         createImg((Math.sqrt((250*250)-(a*a))*-1)+shape2.x+50, (250-a)+85);
     }
-
     for(var a = 250; a > 0; a-=100)
     {
         createImg((Math.sqrt((250*250)-(a*a))*-1)+shape2.x+50, a+50+shape2.y);
+    }
+    for(var a = 0; a < allBitmaps.length;a++)
+    {
+        allBitmaps[a].addEventListener("click", function(){
+           window.location = "camping";
+        });
     }
 });
 setInterval(function(){stage.update()},10);
