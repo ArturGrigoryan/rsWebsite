@@ -16,7 +16,7 @@ function createImg(x, y)
 {
         var container = new createjs.Container();
 
-        var bitmap = new createjs.Bitmap("images/slider/5.jpg");
+        var bitmap = new createjs.Bitmap("images/slider/7.jpg");
         bitmap.regX = bitmap.regY = 0;
         bitmap.y = bitmap.x = 0;
         bitmap.scaleX = bitmap.scaleY = 0.03;
@@ -33,7 +33,7 @@ function createImg(x, y)
             container.y = y;
 }
 $("#canvasCVN").ready(function () {
-    var bitmap = new createjs.Bitmap("images/slider/5.jpg");
+    var bitmap = new createjs.Bitmap("images/slider/7.jpg");
     stage.addChild(bitmap);
     for(var a = 250; a > 0; a-=100)
     {
