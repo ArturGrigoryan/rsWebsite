@@ -16,7 +16,6 @@ app.get("/home", function(req, res){
     res.sendfile(__dirname+"/public/html/home.html");
 });
 app.get("/:file", function (req ,res) {
-    console.log(req.params);
     res.sendfile(__dirname+"/"+req.params.file);
 });
 function replaceSlash(str)
