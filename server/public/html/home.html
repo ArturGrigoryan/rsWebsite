@@ -314,6 +314,18 @@ for (var a = 0, b = 0; a < $(".studentDiv a p").length- 1; a+=2, b++) {
     	slide(["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"]);
         
     </script>
+    <script type="text/javascript">
+        $(".dropdown").hover(function(){
+        $(".dropdown").attr("class", "dropdown open");
+        console.log("hover");
+        }, function(){
+        console.log(this.attributes.class)
+        $(".dropdown").removeAttr("class");
+        this.setAttribute("class", "dropdown")
+        console.log("not hover");
+        })
+    </script>
+    </script>
     <script src="scripts/animations.js"></script>
     <script src="scripts/canvas.js"></script>
 </body>

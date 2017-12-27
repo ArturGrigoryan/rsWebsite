@@ -316,5 +316,16 @@ for (var a = 0, b = 0; a < $(".studentDiv a p").length- 1; a+=2, b++) {
     </script>
     <script src="./scripts/animations.js"></script>
     <script src="./scripts/canvas.js"></script>
+    <script type="text/javascript">
+        $(".dropdown").hover(function(){
+        $(".dropdown").attr("class", "dropdown open");
+        console.log("hover");
+        }, function(){
+        console.log(this.attributes.class)
+        $(".dropdown").removeAttr("class");
+        this.setAttribute("class", "dropdown")
+        console.log("not hover");
+        })
+    </script>
 </body>
 </html>
