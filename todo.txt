@@ -1,4 +1,4 @@
-1. add link slider see more tag
+1. add link slider see more tag +
 2. add pages and paths photos and meetings
 3. add animations
 4. change all pages design ! home.html
