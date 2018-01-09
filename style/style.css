@@ -1,6 +1,12 @@
+@font-face {
+    font-family: ArTarumian;
+    src: local(ArTarumianHeghnar), url(ArTarumianHeghnar-Regular-Italic-8938.ttf);
+    unicode-range: U+0-10FFFF;
+}
 * {
     padding: 0 !important;
     outline: none;
+    font-family: ArTarumian;
 }
 .head
 {
