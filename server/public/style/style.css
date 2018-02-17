@@ -1,6 +1,12 @@
+@font-face {
+    font-family: ArTarumian;
+    src: local(ArTarumianHeghnar), url(ArTarumianHeghnar-Regular-Italic-8938.ttf);
+    unicode-range: U+0-10FFFF;
+}
 * {
     padding: 0 !important;
     outline: none;
+    font-family: ArTarumian;
 }
 .head
 {
@@ -51,10 +57,14 @@
 }
 .logo
 {
+    /*width: 6%;
+    margin-left: 1em;*/
     width: 6%;
-    margin-left: 1em;
+    margin: auto !important;
+    display: block;
+    float: inherit;
 }
-.menu
+.menu, .small-drop
 {
     position: absolute;
     right: 0;
@@ -99,10 +109,6 @@ a
     background-repeat: no-repeat !important;
     background-size: cover !important;
 }
-.home .bigImage
-{
-	background: url(../images/taraz.jpg);
-}
 .text
 {
     font-size: 5em;
@@ -118,6 +124,10 @@ a
 	height: 100%;
 	width: 100%;
 	background: rgba(0,0,0,0.65);
+}
+.students
+{
+    width:100%;
 }
 .Students-Info, .Campaigns, .other
 {
@@ -150,7 +160,7 @@ a
 .right{
 	right:1em;
 }
-.studentsDiv, .Campaigns .content, .About .partniers-content, .project .projects-div, .work .works-div
+.studentsDiv, .Campaigns .content,  .project .projects-div, .work .works-div
 {
 	width: 94%;
     height: 50%;
@@ -162,7 +172,7 @@ a
 	border: solid 1px;
     margin-right: 10px;
     display: inline-block;
-    padding: 80px !important;
+   /* padding: 80px !important;*/
     border-radius: 10em;
 }
 .studentDiv
@@ -180,6 +190,7 @@ a
 }
 .search-bar input, .search-bar select
 {
+    margin-right:1em;
     padding: 10px !important;
     border: solid 1px;
     border-radius: 10px;
@@ -302,7 +313,7 @@ a
     color: white;
     font-family: serif;
     font-style: italic;
-    
+    font-size: 2.25em;
 }
 .smText
 {
@@ -312,14 +323,20 @@ a
     color: white;
     padding: 10px !important;
 }
-.partniers{
-margin-top: 4%;
+.partniers-content
+{
+    margin: 4em !important;
+    margin-left: 6em !important;
 }
+/*.partniers{
+    margin-top: 4%;
+    width: 4em;
+    height: 4em;
+}*/
 .imagesPartniers
 {
 	position: absolute;
     bottom: 0;
-    height: 30%;
     width: 100%;
 }
 .Contact

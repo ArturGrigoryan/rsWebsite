@@ -1,0 +1,24 @@
+/*@media only screen and (max-width:980px)
+{
+	.menu 
+	{
+		display: none;
+	}
+	.small-drop
+	{
+		display: inline-block;
+		margin-right:  1em;
+		color:white;
+	}
+}
+@media only screen and (min-width: 980px)
+{
+	.menu 
+	{
+		display: inline-block;
+	}
+	.small-drop
+	{
+		display: none;
+	}
+}*/

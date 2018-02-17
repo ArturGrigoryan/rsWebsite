@@ -1,13 +1,13 @@
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>Home</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link href="style/style.css" rel="stylesheet" />
-    <script src="https://code.createjs.com/createjs-2015.11.26.min.js" ></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  <link href="./style/style.css" rel="stylesheet" />
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js" ></script>
   <style type="text/css">
     .head
     {
@@ -46,6 +46,10 @@
         background-repeat: no-repeat !important;
         background-size: cover !important; 
     }
+    /*.dropdown
+    {
+    	position: relative;
+    }*/
     .dropdown-menu
     {
         left: -132px;
@@ -57,9 +61,6 @@
     .Campaigns
     {
         height: 100%;
-    	background: url(images/slider/5.jpg);
-    	background-size: cover;
-    	background-repeat: no-repeat;
     }
     .Campaigns .content
     {
@@ -95,17 +96,41 @@
       {
           background: white;
       }
+      @media screen and (max-width:980px)
+        {
+            .menu 
+            {
+                display: none !important;
+            }
+            .small-drop
+            {
+                display: inline-block !important;
+                margin-right:  1em;
+                color:white;
+            }
+        }
+        .menu 
+        {
+            display: inline-block;
+        }
+        .small-drop
+        {
+            display: none;
+        }
   </style>
-    <script src="scripts/canvas.js"></script>
+    <script src="./scripts/canvas.js"></script>
+    <script src="./scripts/responsive_dynamic.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="style/responsive.css"> -->
+    
 </head>
 <body>
     <div class="container-fluid">
-        <div class="head">
-            <a href="home.html">
+        <div class="head col-lg-12 col-md-12 col-sm-12">
+            <a href="home.html" style="width: 100%;height: 0;display: block;">
                 <div class="logo col-lg-1  col-md-1 col-sm-1">
                     <div></div>
                 </div>
-            </a>        
+            </a>
             <div class="menu">
                 <ul>
                     <a href="home.html"><li onclick="scrolling($('.head'))">Գլխաւոր</li></a>
@@ -125,8 +150,28 @@
                     </li>
                 </ul>
             </div>
+            <div class="dropdown small-drop">
+			  <div class="dropdown-toggle glyphicon glyphicon-menu-hamburger" data-toggle="dropdown"></div>
+			  <ul class="dropdown-menu">
+			    <a href="home.html"><li onclick="scrolling($('.head'))">Գլխաւոր</li></a>
+                    <li onclick="scrolling($('.About'))"><a>Մեր մասին</a></li>
+                    <li onclick="scrolling($('.Contact'))"><a>Հետադարձ կապ</a></li>
+                    <li><a href="login.html">Մուտք</a></li>
+                    <li class="dropdown">
+                        <div class=" dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Այլ</div>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li class="dropdown-item" onclick="scrolling($('.Students-Info'))"><a>Աշակերտներ</a></li>
+                            <li class="dropdown-item" onclick="scrolling($('.News'))"><a>Նորութիւններ</a></li>
+                            <li class="dropdown-item" onclick="scrolling($('.Campaigns'))"><a>Արշաւներ</a></li>
+                            <li class="dropdown-item" onclick="scrolling($('.Meetings'))"><a>Այցելութիւններ</a></li>
+                            <li class="dropdown-item" onclick="scrolling($('.Lectures'))"><a>Դասախօսութիւն</a></li>
+                            <li class="dropdown-item" onclick="scrolling($('.Pictures'))"><a>Լուսանկարներ</a></li>
+                        </ul>
+                    </li>
+			  </ul>
+			</div>
         </div>
-        <div class="content">
+        <div class="content col-lg-12 col-md-12 col-sm-12">
             <div class="home col-lg-12 col-md-12 col-sm-12" style="position:relative !important;">
                 <div class="bigImage col-lg-12 col-md-12 col-sm-12"></div>
                 <div class="left" style="left:1em !important;"><</div>
@@ -135,7 +180,7 @@
 			    	<div class="pages-div">
 			    	</div>
 			    </div>
-                <div style="bottom: 5em; left: 40%;" class="more">Տեսնել Աւելին</div>
+                <a style="bottom: 5em; left: 40%; position:absolute;" href="news.html"><div class="more">Տեսնել Աւելին</div></a>
             </div>
             <div class="About col-lg-12 col-md-12 col-sm-12"  style="position:relative !important;">
                 <div class="bigImage"></div>
@@ -161,37 +206,37 @@
                 <div class="imagesPartniers">
                     <div class="left"><</div>
                 <div class="right">></div>
-                    <div class="partniers-content">
-                        <h1 class="title">Մեր գործընկերները</h1>
-                        <div class="partniers" style="color:white;"></div>
-                        <div class="partniers" style="color:white;"></div>
-                        <div class="partniers" style="color:white;"></div>
-                        <div class="partniers" style="color:white;"></div>
-                        <div class="partniers" style="color:white;"></div>
-                        <div class="partniers" style="color:white;"></div>
-                        <div class="partniers" style="color:white;"></div>
-                        <div class="partniers" style="color:white;"></div>
+                <h1 class="title">Մեր գործընկերները</h1>
+                    <div class="partniers-content col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                        <div class="partniers col-lg-1 col-sm-1 col-md-1 col-xs-1" style="color:white;"></div>
+                        <div class="partniers col-lg-1 col-sm-1 col-md-1 col-xs-1" style="color:white;"></div>
+                        <div class="partniers col-lg-1 col-sm-1 col-md-1 col-xs-1" style="color:white;"></div>
+                        <div class="partniers col-lg-1 col-sm-1 col-md-1 col-xs-1" style="color:white;"></div>
+                        <div class="partniers col-lg-1 col-sm-1 col-md-1 col-xs-1" style="color:white;"></div>
+                        <div class="partniers col-lg-1 col-sm-1 col-md-1 col-xs-1" style="color:white;"></div>
+                        <div class="partniers col-lg-1 col-sm-1 col-md-1 col-xs-1" style="color:white;"></div>
+                        <div class="partniers col-lg-1 col-sm-1 col-md-1 col-xs-1" style="color:white;"></div>
                     </div>
                 </div>
             </div>
             <div class="Students-Info col-lg-12 col-md-12 col-sm-12 " style="position:relative !important;">
                 <h1 class="title">Աշակերտներ</h1>
                 <div class="search-bar">
-                    <input type="text" placeholder="Որոնում">
-                    <select>
+                    <input type="text" placeholder="Որոնում" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <select class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
                         <option>-- Մարզեր --</option>
                         <option>Գյումրի</option>
                         <option>Կոտայք</option>
                         <option>Երեւան</option>
                     </select>
-                    <select>
+                    <select class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
                         <option>-- Ուսանողներ --</option>
                         <option>I կուրս</option>
                         <option>II կուրս</option>
                         <option>III կուրս</option>
                         <option>IV կուրս</option>
                     </select>
-                    <select>
+                    <select class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="display: block;float: none;">
                         <option>-- Շրջանավարտներ --</option>
                         <option>2019-2020թթ</option>
                         <option>2018-2019թթ</option>
@@ -202,42 +247,42 @@
                 <div class="left"><</div>
                 <div class="right">></div>
                 <div class="studentsDiv">
-                    <div class="studentDiv">
+                    <div class="studentDiv col-lg-1 col-sm-1 col-md-1 col-xs-1">
                         <a href="student.html">
                             <div id="student1" class="students" style="background: url(images/1.jpg);"></div>
                             <p>Արթուր Գրիգորեան</p>
                             <p>Կուրս 1</p>
                         </a>
                     </div>
-                    <div class="studentDiv">
+                    <div class="studentDiv col-lg-1 col-sm-1 col-md-1 col-xs-1">
                         <a href="student.html">
                             <div id="student2" class="students" style="background: url(images/2.jpg)"></div>
                             <p>Էրիկ Մկրտչեան</p>
                             <p>Կուրս 1</p>
                         </a>
                     </div>
-                    <div class="studentDiv">
+                    <div class="studentDiv col-lg-1 col-sm-1 col-md-1 col-xs-1">
                         <a href="student.html">
                             <div id="student3" class="students" style="background: url(images/9.jpg)"></div>
                             <p>Սամուել Հարութիւնեան</p>
                             <p>Կուրս 2</p>
                         </a>
                     </div>
-                    <div class="studentDiv">
+                    <div class="studentDiv col-lg-1 col-sm-1 col-md-1 col-xs-1">
                         <a href="student.html">
-                            <div id="student5" class="students" style="background: url(images/7.jpg)"></div>
+                            <div id="student4" class="students" style="background: url(images/7.jpg)"></div>
                             <p>Արամ Պողոսեան</p>
                             <p>Կուրս 1</p>
                         </a>
                     </div>
-                    <div class="studentDiv">
+                    <div class="studentDiv col-lg-1 col-sm-1 col-md-1 col-xs-1">
                         <a href="student.html">
                             <div id="student5" class="students" style="background: url(images/21.jpg)"></div>
                             <p>Ստեփան Մանջիկեան</p>
                             <p>Կուրս 1</p>
                         </a>
                     </div>
-                    <div class="studentDiv">
+                    <div class="studentDiv col-lg-1 col-sm-1 col-md-1 col-xs-1">
                         <a href="student.html">
                             <div id="student6" class="students" style="background: url(images/5.jpg)"></div>
                             <p>Ինգա Վաղարշեան</p>
@@ -245,7 +290,7 @@
                         </a>
                     </div>
                 </div>
-                <a href="students.html"><div class="more">Նայել ավելին</div></a>
+                <a href="students.html"><div class="more">Տեսնել ավելին</div></a>
             </div>
             
             <div class="Campaigns col-lg-12 col-md-12 col-sm-12"  style="position:relative !important;">
@@ -253,6 +298,10 @@
                 <canvas id="campingCVN" width="1423" height="769"></canvas>
                 <!--<div class="popupwindow" style="position: absolute;top:0;"></div>-->
             </div>
+            <!-- <div class="Meetings col-lg-12 col-md-12 col-sm-12">
+                <h1 class="title">Այցելութիւններ</h1>
+
+            </div> -->
             <div class="Lectures col-lg-12 col-md-12 col-sm-12"  style="position:relative !important;">
                 <div class="bigImage" style="background: url(images/lectures_wallpaper.jpg);width: 100%;"></div>
                 <div class="popupwindow"></div>
@@ -277,7 +326,6 @@
                 </div>
                 <h1>Մեր դասախօսութիւնները</h1>
             </div>            
-        </div>
         <div class="Contact col-lg-12 col-md-12 col-sm-12" style="position:relative !important;">
                 <h1 class="title" style="color:#333;">Հետադարձ կապ</h1>
                 <form action="/" method="post" style="float: left;width: 13%;margin-left: 7em;">
@@ -290,12 +338,13 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1826.711480136133!2d44.550258484916256!3d40.21580383095239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abd2b8c170641%3A0x298cd571849b8cc4!2z0JjQvdGB0YLQuNCz0LXQudGC!5e1!3m2!1sru!2s!4v1512530724355" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
+        </div>
     </div> 
     <script>
-        function scrolling(elem) {
+        /*function scrolling(elem) {
             console.log("clicked");
             $("body").scrollTop(elem.position().top, 0);
-        }
+        }*/
         var namesOfStudents = [
 {name: "Արթուր Գրիգորյան", course: 1, src: "1.jpg"},
 {name: "Էրիկ Մկրտչեան", course: 1, src: "2.jpg"},
@@ -309,24 +358,32 @@ for (var a = 0, b = 0; a < $(".studentDiv a p").length- 1; a+=2, b++) {
     $(".studentDiv a")[b].href+="?name="+namesOfStudents[b].name+"&img=images/"+namesOfStudents[b].src;
 }
          </script>
-         <script src="scripts/slider.js"></script>
+         <script src="./scripts/slider.js"></script>
     <script>
-    	slide(["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"]);
+    	slide(["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"]);
         
     </script>
+    <!-- <script src="./scripts/animations.js"></script> -->
+    <script src="./scripts/canvas.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
     <script type="text/javascript">
+        var historyAttr = "";
         $(".dropdown").hover(function(){
-        $(".dropdown").attr("class", "dropdown open");
-        console.log("hover");
+            historyAttr = this.className;
+            $(".dropdown").attr("class", "dropdown small-drop open");
         }, function(){
-        console.log(this.attributes.class)
-        $(".dropdown").removeAttr("class");
-        this.setAttribute("class", "dropdown")
-        console.log("not hover");
+            $(".dropdown").removeAttr("class");
+            this.setAttribute("class", historyAttr);
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+        var socket = io.connect();
+        window.socket = socket;
+        socket.emit('bodyWidth', $("body").width());    
         })
+        
     </script>
-    </script>
-    <script src="scripts/animations.js"></script>
-    <script src="scripts/canvas.js"></script>
 </body>
 </html>
